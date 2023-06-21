@@ -1,6 +1,7 @@
 package com.example.connexion;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
@@ -54,6 +55,17 @@ public class MainActivity2 extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_activity2, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings){
+            return true;
+        }
+        if (id == R.id.Quitter){ System.exit(0);}
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
